@@ -1,0 +1,21 @@
+#drum-machine {
+    border: 2px solid black;
+    /* width: 500px;
+height: 500px;
+    margin: 0 auto;
+    background: #f7f7f7;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -250px; */
+}
+
+body {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
