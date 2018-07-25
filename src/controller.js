@@ -7,11 +7,12 @@ import ControlPanel from "./components/controlpanel";
 
 class Controller extends Component {
 	state = {};
+	keys = ["q", "w", "e", "a", "s", "d", "z", "x", "c"];
 
 	render() {
 		return (
 			<div>
-				<Keyboard />
+				<Keyboard keys={this.keys} />
 				<ControlPanel />
 				<Display id={"display"} data={"Display"} />
 			</div>
