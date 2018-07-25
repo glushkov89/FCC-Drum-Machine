@@ -5,21 +5,26 @@ import KeyboardEventHandler from "react-keyboard-event-handler";
 import Button from "./button";
 
 const Keyboard = (props) => {
-	console.log(props);
-
 	const keyPressEventHandler = (key, e) => console.log(`"${key}" key pressed`);
-	const clickEventHandler = (button) => {
-		return () => console.log(`"${button}" button pressed`);
+	const makeClickEventHandler = (button) => {
+		return () => console.log(`"${button}" button clicked`);
 	};
 
-	const keyboardButtons = props.keys.map((item) => (
-		<Button key={item} btn={item} clkEvntHndlr={clickEventHandler(item)} />
+	const keyboardButtons = props.sounds.map((obj) => (
+		<Button
+			key={obj.key}
+			btn={obj.key}
+			play={props.control}
+			clkEvntHndlr={makeClickEventHandler(obj)}
+		/>
 	));
+	const keys = props.sounds.map((obj) => obj.key);
+
 	return (
 		<div>
 			<h3>Keyboard</h3>
 			<KeyboardEventHandler
-				handleKeys={props.keys}
+				handleKeys={keys}
 				onKeyEvent={keyPressEventHandler}
 			/>
 			{keyboardButtons}
