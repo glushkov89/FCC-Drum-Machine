@@ -8,7 +8,6 @@ import ControlPanel from "./components/controlpanel";
 class Controller extends Component {
 	state = {
 		on: true,
-		key: "",
 		filename: "",
 		volume: 0.2
 	};
@@ -27,20 +26,38 @@ class Controller extends Component {
 
 	playSound = (key) => {
 		return () => {
-			const sound = document.getElementById(key);
-			sound.volume = this.state.volume;
-			this.setState({ filename: sound.src });
-			console.log(sound);
-			//sound.play();
+			if (this.state.on) {
+				const sound = document.getElementById(key);
+				sound.volume = this.state.volume;
+				let filename = sound.src.substring(sound.src.lastIndexOf("/") + 1);
+				this.setState({ filename: `${sound.id} - ${filename}` });
+				//console.log(sound);
+				sound.play();
+			}
 		};
 	};
 
+	adjustVolume = (value) => {
+		this.setState({ volume: value });
+	};
+
+	togglePower = () => {
+		this.setState({ on: this.state.on ? false : true });
+	};
+
 	render() {
-		//		console.log(this.state);
+		//console.log(this.state);
 		return (
 			<div>
-				<Keyboard sounds={this.sounds} playSound={this.playSound} />
-				<ControlPanel />
+				<Keyboard
+					sounds={this.sounds}
+					playSound={this.playSound}
+					power={this.state.on}
+				/>
+				<ControlPanel
+					adjustVolume={this.adjustVolume}
+					togglePower={this.togglePower}
+				/>
 				<Display filename={this.state.filename} />
 			</div>
 		);

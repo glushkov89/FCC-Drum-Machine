@@ -11,6 +11,7 @@ const Keyboard = (props) => {
 		<Button
 			key={obj.key}
 			data={obj}
+			power={props.power}
 			clickHandler={handleClick(obj.key.toUpperCase())}
 		/>
 	));

@@ -9,7 +9,7 @@ const Button = (props) => {
 		<div onClick={props.clickHandler}>
 			<div className={"drum-pad"} id={props.data.filename}>
 				{props.data.key.toUpperCase()}
-				<Audio data={props.data} />
+				<Audio data={props.data} power={props.power} />
 			</div>
 		</div>
 	);

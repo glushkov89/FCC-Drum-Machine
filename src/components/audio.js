@@ -1,7 +1,8 @@
 import React from "react";
 
 const Audio = (props) => {
-	return (
+	//	console.log(props);
+	return props.power ? (
 		<audio
 			className={"clip"}
 			id={props.data.key.toUpperCase()}
@@ -11,7 +12,7 @@ const Audio = (props) => {
 		>
 			<p>HTML5 audio is not supported on your browser</p>
 		</audio>
-	);
+	) : null;
 };
 
 export default Audio;
