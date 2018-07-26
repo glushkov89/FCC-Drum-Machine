@@ -5,6 +5,9 @@ import Display from "./components/display";
 import Keyboard from "./components/keyboard";
 import ControlPanel from "./components/controlpanel";
 
+//Styles
+import bClassNames from "./components/bootstrap-classnames";
+
 class Controller extends Component {
 	state = {
 		on: true,
@@ -53,18 +56,18 @@ class Controller extends Component {
 	render() {
 		//console.log(this.state);
 		return (
-			<div>
+			<div className={bClassNames.controller}>
 				<Keyboard
 					sounds={this.sounds}
 					createSoundPlay={this.createSoundPlay}
 					power={this.state.on}
 				/>
+				<Display filename={this.state.filename} />
 				<ControlPanel
 					adjustVolume={this.adjustVolume}
 					togglePower={this.togglePower}
 					currentVolume={this.state.volume.toString()}
 				/>
-				<Display filename={this.state.filename} />
 			</div>
 		);
 	}

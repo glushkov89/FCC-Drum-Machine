@@ -8,7 +8,7 @@ const Audio = (props) => {
 			id={props.data.key.toUpperCase()}
 			src={`/sounds/${props.data.filename}`}
 			type={"audio/mp3"}
-			controls
+			//controls
 		>
 			<p>HTML5 audio is not supported on your browser</p>
 		</audio>

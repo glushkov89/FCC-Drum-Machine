@@ -10,12 +10,3 @@ height: 500px;
     margin-left: -250px;
     margin-top: -250px; */
 }
-
-body {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
