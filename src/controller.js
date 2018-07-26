@@ -42,7 +42,7 @@ class Controller extends Component {
 	};
 
 	togglePower = () => {
-		this.setState({ on: this.state.on ? false : true });
+		this.setState({ on: this.state.on ? false : true, filename: "" });
 	};
 
 	render() {
