@@ -9,7 +9,7 @@ class Controller extends Component {
 	state = {
 		on: true,
 		filename: "",
-		volume: 0.2
+		volume: 0.5
 	};
 
 	sounds = [
@@ -24,7 +24,7 @@ class Controller extends Component {
 		{ key: "c", filename: "yamahfingerpluck.mp3" }
 	];
 
-	playSound = (key) => {
+	createSoundPlay = (key) => {
 		return () => {
 			if (this.state.on) {
 				const sound = document.getElementById(key);
@@ -45,18 +45,24 @@ class Controller extends Component {
 		this.setState({ on: this.state.on ? false : true, filename: "" });
 	};
 
+	addKeyboardEventListeners = () => {
+		const keys = this.sounds.map((obj) => obj.key);
+		console.log(keys);
+	};
+
 	render() {
 		//console.log(this.state);
 		return (
 			<div>
 				<Keyboard
 					sounds={this.sounds}
-					playSound={this.playSound}
+					createSoundPlay={this.createSoundPlay}
 					power={this.state.on}
 				/>
 				<ControlPanel
 					adjustVolume={this.adjustVolume}
 					togglePower={this.togglePower}
+					currentVolume={this.state.volume.toString()}
 				/>
 				<Display filename={this.state.filename} />
 			</div>

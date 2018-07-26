@@ -16,6 +16,7 @@ const ControlPanel = (props) => {
 				min="0"
 				max="1.0"
 				step="0.1"
+				value={props.currentVolume}
 				onChange={(e) => props.adjustVolume(e.target.value)}
 			/>
 			Volume
