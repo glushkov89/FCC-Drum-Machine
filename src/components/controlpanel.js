@@ -9,7 +9,7 @@ import bClassNames from "./bootstrap-classnames";
 
 const ControlPanel = (props) => {
 	return (
-		<div className={bClassNames.controlpanel}>
+		<div className={bClassNames.controlpanel} id={"control-panel"}>
 			<SwitchIOSStyle power={props.togglePower} />
 			<SliderIOSStyle {...props} />
 		</div>
