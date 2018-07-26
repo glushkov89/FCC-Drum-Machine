@@ -1,24 +1,15 @@
 import React from "react";
 
+//Components
+import Audio from "./audio";
+
 const Button = (props) => {
-	console.log(props.play);
-	const name = props.btn.toUpperCase();
+	//	console.log(props);
 	return (
-		<div>
-			<div className={"drum-pad"} id={name} onClick={props.clkEvntHndlr}>
-				{name}
-				{props.play.key === props.btn ? (
-					<audio
-						src={`/sounds/${props.play.filename}`}
-						type={"audio/mp3"}
-						className={"clip"}
-						controls
-						autoPlay
-						volume={props.play.volume}
-					>
-						<p>HTML5 audio is not supported on your browser</p>
-					</audio>
-				) : null}
+		<div onClick={props.clickHandler}>
+			<div className={"drum-pad"} id={props.data.filename}>
+				{props.data.key.toUpperCase()}
+				<Audio data={props.data} />
 			</div>
 		</div>
 	);

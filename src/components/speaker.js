@@ -1,5 +1,4 @@
 import React from "react";
-import Sound from "react-sound";
 
 const Speaker = (props) => {
 	if (props.play) {
