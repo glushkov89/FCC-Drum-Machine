@@ -57,16 +57,16 @@ class Controller extends Component {
 		//console.log(this.state);
 		return (
 			<div className={bClassNames.controller}>
-				<ControlPanel
-					adjustVolume={this.adjustVolume}
-					togglePower={this.togglePower}
-					currentVolume={this.state.volume.toString()}
-				/>
 				<Display filename={this.state.filename} />
 				<Keyboard
 					sounds={this.sounds}
 					createSoundPlay={this.createSoundPlay}
 					power={this.state.on}
+				/>
+				<ControlPanel
+					adjustVolume={this.adjustVolume}
+					togglePower={this.togglePower}
+					currentVolume={this.state.volume.toString()}
 				/>
 			</div>
 		);

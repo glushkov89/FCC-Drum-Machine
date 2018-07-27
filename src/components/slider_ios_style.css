@@ -1,7 +1,10 @@
-.slidecontainer {
-    width: 50%;
-    /* Width of the outside container */
+/* Width of the outside container */
+
+/* .slidecontainer {
+    padding: 1vh auto;
 }
+
+*/
 
 /* The slider itself */
 
@@ -18,7 +21,7 @@
     /* Grey background */
     outline: none;
     /* Remove outline */
-    opacity: 0.7;
+    opacity: 0.9;
     /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: 0.2s;
     /* 0.2 seconds transition on hover */
@@ -43,7 +46,7 @@
     height: 25px;
     border-radius: 50%;
     /* Slider handle height */
-    background: #4caf50;
+    background: rgba(19, 191, 17, 1);
     /* Green background */
     cursor: pointer;
     /* Cursor on hover */
@@ -55,7 +58,7 @@
     height: 25px;
     border-radius: 50%;
     /* Slider handle height */
-    background: #4caf50;
+    background: rgba(19, 191, 17, 1);
     /* Green background */
     cursor: pointer;
     /* Cursor on hover */

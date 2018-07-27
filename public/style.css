@@ -1,12 +1,58 @@
-/* #drum-machine {
-    border: 2px solid black;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-    background: #f7f7f7;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -250px;
-    margin-top: -250px;
-} */
+#switch-container {
+	padding-top: 10px;
+}
+
+@media screen and (orientation: portrait) {
+	#drum-machine {
+		max-width: 90vw;
+		margin-top: 5vh;
+	}
+	#display {
+		height: 10vh;
+	}
+	.fa-icon {
+		display: none !important;
+	}
+	#switch-container,
+	#slider {
+		padding-top: 5vh;
+	}
+}
+
+@media screen and (orientation: landscape) {
+	#drum-machine {
+		max-width: 30vw;
+		margin-top: 10vh;
+	}
+	#display {
+		height: 10vh;
+		max-width: 20vw;
+	}
+	.slidecontainer {
+		max-width: 20vw;
+	}
+	#switch-container,
+	#slider {
+		padding-top: 2vh;
+	}
+}
+
+#drum-machine {
+	max-height: 95vh;
+	padding-top: 2vh;
+	border-radius: 10px;
+}
+
+/*TEMP*/
+
+#drum-machine,
+#toggles,
+.row,
+.slidecontainer {
+	border: 0.5px solid black;
+}
+
+.container,
+.col {
+	border: 0.5px solid blue;
+}

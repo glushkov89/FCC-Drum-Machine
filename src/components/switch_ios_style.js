@@ -8,7 +8,7 @@ import bClassNames from "./bootstrap-classnames";
 
 const SwitchIOSStyle = (props) => {
 	return (
-		<div className={bClassNames.switch}>
+		<div id="switch-container" className={bClassNames.switch}>
 			{/* <input
 				type="checkbox"
 				name="Power"

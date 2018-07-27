@@ -9,9 +9,17 @@ import "./slider_ios_style.css";
 
 const SliderIOSStyle = (props) => {
 	return (
-		<div className={bClassNames.slider}>
-			<FontAwesomeIcon icon={faVolumeOff} />
-			<div className={"slidecontainer"}>
+		<div id="slider" className={bClassNames.slider}>
+			{/* <div class="row">
+				<div class="col-2">
+					<FontAwesomeIcon
+						icon={faVolumeOff}
+						className={bClassNames.faIconClass}
+						style={bClassNames.faIconStyle}
+					/>
+				</div>
+				<div class="col"> */}
+			<div className={"container slidecontainer"}>
 				<input
 					type="range"
 					name="Volume"
@@ -23,7 +31,16 @@ const SliderIOSStyle = (props) => {
 					onChange={(e) => props.adjustVolume(e.target.value)}
 				/>
 			</div>
-			<FontAwesomeIcon icon={faVolumeUp} />
+			{/* </div>
+
+				<div class="col-2">
+					<FontAwesomeIcon
+						icon={faVolumeUp}
+						className={bClassNames.faIconClass}
+						style={bClassNames.faIconStyle}
+					/>
+				</div>
+			</div> */}
 		</div>
 	);
 };

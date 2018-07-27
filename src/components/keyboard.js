@@ -12,17 +12,19 @@ const Keyboard = (props) => {
 	const keyboardButtons = props.sounds.map((obj) => {
 		keys.push(obj.key);
 		return (
-			<Button
-				key={obj.key}
-				data={obj}
-				power={props.power}
-				clickHandler={props.createSoundPlay(obj.key.toUpperCase())}
-			/>
+			<div class="col">
+				<Button
+					key={obj.key}
+					data={obj}
+					power={props.power}
+					clickHandler={props.createSoundPlay(obj.key.toUpperCase())}
+				/>
+			</div>
 		);
 	});
 
 	return (
-		<div className={bClassNames.controller}>
+		<div className={bClassNames.keyboard}>
 			{keyboardButtons}
 			<KeyboardEventHandler
 				handleKeys={keys}
