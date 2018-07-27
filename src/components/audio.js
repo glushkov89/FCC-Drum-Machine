@@ -6,7 +6,7 @@ const Audio = (props) => {
 		<audio
 			className={"clip"}
 			id={props.data.key.toUpperCase()}
-			src={`/sounds/${props.data.filename}`}
+			src={`${props.data.filename}`}
 			type={"audio/mp3"}
 			//controls
 		>

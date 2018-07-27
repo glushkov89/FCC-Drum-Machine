@@ -16,15 +16,43 @@ class Controller extends Component {
 	};
 
 	sounds = [
-		{ key: "q", filename: "yamaha-a.mp3" },
-		{ key: "w", filename: "yamaha-a6.mp3" },
-		{ key: "e", filename: "yamaha-a7.mp3" },
-		{ key: "a", filename: "yamaha-ab.mp3" },
-		{ key: "s", filename: "yamaha-adim.mp3" },
-		{ key: "d", filename: "yamaha-am.mp3" },
-		{ key: "z", filename: "yamaha-am6.mp3" },
-		{ key: "x", filename: "yamaha-am7.mp3" },
-		{ key: "c", filename: "yamahfingerpluck.mp3" }
+		{
+			key: "q",
+			filename: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
+		},
+		{
+			key: "w",
+			filename: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
+		},
+		{
+			key: "e",
+			filename: "https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"
+		},
+		{
+			key: "a",
+			filename:
+				"https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3"
+		},
+		{
+			key: "s",
+			filename: "https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"
+		},
+		{
+			key: "d",
+			filename: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
+		},
+		{
+			key: "z",
+			filename: "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"
+		},
+		{
+			key: "x",
+			filename: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
+		},
+		{
+			key: "c",
+			filename: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
+		}
 	];
 
 	createSoundPlay = (key) => {

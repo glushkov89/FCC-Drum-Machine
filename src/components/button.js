@@ -7,7 +7,6 @@ import Audio from "./audio";
 import bClassNames from "./bootstrap-classnames";
 
 const Button = (props) => {
-	//	console.log(props);
 	return (
 		<div className={bClassNames.button} onClick={props.clickHandler}>
 			<div className={"drum-pad"} id={props.data.filename}>
