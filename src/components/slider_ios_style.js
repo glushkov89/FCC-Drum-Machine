@@ -1,7 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faVolumeOff } from "@fortawesome/free-solid-svg-icons";
-import { faVolumeUp } from "@fortawesome/free-solid-svg-icons";
 
 //Styles
 import bClassNames from "./bootstrap-classnames";

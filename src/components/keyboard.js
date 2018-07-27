@@ -12,7 +12,7 @@ const Keyboard = (props) => {
 	const keyboardButtons = props.sounds.map((obj) => {
 		keys.push(obj.key);
 		return (
-			<div class="col">
+			<div className="col-4">
 				<Button
 					key={obj.key}
 					data={obj}
@@ -25,7 +25,11 @@ const Keyboard = (props) => {
 
 	return (
 		<div className={bClassNames.keyboard}>
-			{keyboardButtons}
+			<div className="row">{keyboardButtons.slice(0, 3)}</div>
+			<div className="row">{keyboardButtons.slice(3, 6)}</div>
+			<div className="row">
+				{keyboardButtons.slice(6, keyboardButtons.length + 1)}
+			</div>
 			<KeyboardEventHandler
 				handleKeys={keys}
 				onKeyEvent={(key, e) => {

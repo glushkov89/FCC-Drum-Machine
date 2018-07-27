@@ -1,7 +1,3 @@
-#switch-container {
-	padding-top: 10px;
-}
-
 @media screen and (orientation: portrait) {
 	#drum-machine {
 		max-width: 90vw;
@@ -15,7 +11,7 @@
 	}
 	#switch-container,
 	#slider {
-		padding-top: 5vh;
+		padding-top: 5vh !important;
 	}
 }
 
@@ -37,22 +33,63 @@
 	}
 }
 
+#switch-container {
+	padding-top: 10px;
+}
+
 #drum-machine {
 	max-height: 95vh;
 	padding-top: 2vh;
 	border-radius: 10px;
 }
 
+.my-button {
+	border: 1.5px solid grey;
+	border-radius: 8px;
+	height: 60px;
+	width: 60px;
+	margin: 10px auto;
+}
+
+.my-button:hover {
+	border: 1px solid grey;
+	border-radius: 8px;
+	height: 58px;
+	width: 58px;
+	margin: 10px auto;
+}
+
+.drum-pad {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+body {
+	font-family: "Open Sans", sans-serif !important;
+}
+
+footer {
+	margin-top: 30vh;
+	width: 100%;
+	font-size: 14px;
+	text-align: center;
+	/**/
+	/* border: 0.5px solid black; */
+}
+
 /*TEMP*/
 
-#drum-machine,
+/* #drum-machine,
 #toggles,
 .row,
 .slidecontainer {
-	border: 0.5px solid black;
+    border: 0.5px solid black;
 }
 
 .container,
-.col {
-	border: 0.5px solid blue;
-}
+.col,
+.col-4 {
+    border: 0.5px solid blue;
+} */

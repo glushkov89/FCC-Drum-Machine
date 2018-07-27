@@ -1,7 +1,7 @@
 const bClassNames = {
 	controller: "",
 	keyboard: "container",
-	button: "",
+	button: "my-button text-center shadow-lg rounded",
 	controlpanel: "container",
 	switch: "",
 	slider: "",
